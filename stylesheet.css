@@ -1,3 +1,5 @@
+@import 'https://cdn.allaoui.com/production/assets/fonts/allaoui/font-index.css';
+
 :root {
     --navy: #100C34;
     --blue: #007DFF;
@@ -15,7 +17,7 @@
     --t2: #3D4560;
     --t3: #6B748A;
     --t4: #9AA0B2;
-    --font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font: Allaoui, system-ui, -apple-system, sans-serif;
     --nav-h: 66px;
     --max: 1200px;
     --ease: cubic-bezier(.16, 1, .3, 1);
@@ -183,6 +185,7 @@ section {
 .btn-ghost:hover {
     border-color: var(--navy);
     background: var(--off);
+    color: var(--navy);
     text-decoration: none
 }
 
@@ -2082,18 +2085,31 @@ details.fi .fa a {
 
 @media(max-width:560px) {
     .scta {
-        flex-direction: column;
-        padding: 12px 18px;
-        gap: 10px
+        flex-direction: row;
+        padding: 10px 16px;
+        gap: 8px;
+        justify-content: center
     }
 
     .scta .stxt {
+        display: none
+    }
+
+    .scta .sbtns {
+        width: 100%;
+        gap: 8px
+    }
+
+    .scta .sbtns a {
+        flex: 1;
+        justify-content: center;
         text-align: center;
-        font-size: .83rem
+        padding: 11px 14px;
+        font-size: .85rem
     }
 
     body {
-        padding-bottom: 160px
+        padding-bottom: 72px
     }
 }
 
