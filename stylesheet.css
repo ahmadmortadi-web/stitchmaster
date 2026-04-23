@@ -285,14 +285,17 @@ section {
         border-bottom: 1px solid var(--bdr);
         flex-direction: column;
         gap: 0;
-        padding: 12px 20px;
+        padding: 0 20px;
+        border-bottom: 0px solid var(--bdr);
         max-height: 0;
         overflow: hidden;
-        transition: max-height .3s var(--ease)
+        transition: max-height .3s var(--ease), padding .3s var(--ease), border-width .3s var(--ease)
     }
 
     .nav.open .nav-links {
-        max-height: 480px
+        max-height: 480px;
+        padding: 12px 20px;
+        border-bottom-width: 1px
     }
 
     .nav-links a {
