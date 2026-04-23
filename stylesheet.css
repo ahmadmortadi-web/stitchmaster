@@ -176,7 +176,7 @@ section {
 
 .btn-ghost {
     background: transparent;
-    color: var(--navy);
+    color: var(--white);
     border-color: var(--bdr2)
 }
 
@@ -405,10 +405,7 @@ section {
 
 .hero-h1 em {
     font-style: normal;
-    background: linear-gradient(135deg, #4DA6FF, #80C4FF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text
+    color: var(--blue);
 }
 
 /* Subline */
@@ -1901,7 +1898,7 @@ section {
 
 /* About */
 .about-sec {
-    background: var(--off)
+    background: var(--navy)
 }
 
 .about-grid {
@@ -1911,19 +1908,12 @@ section {
     align-items: center
 }
 
-.about-img {
-    background-image: url("images/team-collage.webp");
-    aspect-ratio: 5/4;
-    border-radius: 8px;
-    background: var(--navy);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--bdr);
-    color: rgba(255, 255, 255, .5);
-    text-align: center;
-    padding: 28px
+
+.about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block
 }
 
 .a-vl {
@@ -1942,12 +1932,14 @@ section {
 }
 
 .about-txt h2 {
-    margin-bottom: 14px
+    margin-bottom: 14px;
+    color: var(--bdr);
 }
 
 .about-txt p {
     margin-bottom: 13px;
-    font-size: .97rem
+    font-size: .97rem;
+    color: var(--bdr);
 }
 
 .a-stats {
@@ -1957,13 +1949,13 @@ section {
     padding: 22px 0;
     margin: 18px 0;
     border-top: 1px solid var(--bdr);
-    border-bottom: 1px solid var(--bdr)
+    border-bottom: 1px solid var(--bdr);
 }
 
 .a-stat .av {
     font-size: 1.75rem;
     font-weight: 900;
-    color: var(--navy);
+    color: var(--off);
     letter-spacing: -.03em;
     display: block;
     line-height: 1
