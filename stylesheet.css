@@ -178,7 +178,7 @@ section {
 
 .btn-ghost {
     background: transparent;
-    color: var(--white);
+    color: var(--navy);
     border-color: var(--bdr2)
 }
 
@@ -353,33 +353,8 @@ section {
     align-items: center
 }
 
-/* Eyebrow badge */
-.hero-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-size: .7rem;
-    font-weight: 700;
-    letter-spacing: .16em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, .6);
-    background: rgba(255, 255, 255, .06);
-    border: 1px solid rgba(255, 255, 255, .1);
-    padding: 8px 18px;
-    border-radius: 99px;
-    margin-bottom: 28px;
-    backdrop-filter: blur(8px);
-    animation: heroFade .6s var(--ease) .05s both
-}
 
-.hero-dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--green);
-    box-shadow: 0 0 0 0 rgba(0, 184, 148, .5);
-    animation: dotPulse 2s infinite
-}
+
 
 @keyframes dotPulse {
     0% {
@@ -456,11 +431,11 @@ section {
 
 .hero-stat-l {
     display: block;
-    font-size: .6rem;
-    font-weight: 700;
+    color: var(--red);
+   font-size: 0.9rem;
+   font-weight: 900;
     letter-spacing: .14em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, .4);
     margin-top: 5px
 }
 
@@ -522,45 +497,6 @@ section {
         linear-gradient(180deg, rgba(16, 12, 52, .25) 0%, transparent 35%),
         linear-gradient(0deg, rgba(16, 12, 52, .65) 0%, transparent 45%),
         linear-gradient(90deg, rgba(16, 12, 52, .15) 0%, transparent 25%)
-}
-
-/* Floating tag card on image */
-.hero-image-tag {
-    position: absolute;
-    bottom: 20px;
-    right: 24px;
-    z-index: 3;
-    background: rgba(255, 255, 255, .95);
-    backdrop-filter: blur(16px);
-    border-radius: 12px;
-    padding: 16px 22px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, .3);
-    display: flex;
-    flex-direction: column;
-    min-width: 180px
-}
-
-.hero-tag-label {
-    font-size: .6rem;
-    font-weight: 800;
-    letter-spacing: .15em;
-    text-transform: uppercase;
-    color: var(--red);
-    margin-bottom: 3px
-}
-
-.hero-tag-model {
-    font-size: 1.35rem;
-    font-weight: 800;
-    color: var(--navy);
-    letter-spacing: -.02em;
-    line-height: 1.15
-}
-
-.hero-tag-sub {
-    font-size: .78rem;
-    color: var(--t3);
-    margin-top: 2px
 }
 
 /* Entry animation */
@@ -670,6 +606,34 @@ section {
     .hero-tag-sub {
         font-size: .7rem
     }
+}
+
+/* Quick Stats Bar */
+.stats-bar-sec {
+    padding: 42px 0;
+    background: var(--t1);
+    border-top: 1px solid var(--bdr);
+    border-bottom: 1px solid var(--bdr);
+}
+
+.stats-bar-sec .container {
+    display: flex;
+    justify-content: center;
+}
+
+.stats-bar-sec .hero-stats {
+    margin-bottom: 0;
+    animation: none;
+    opacity: 1;
+    transform: none;
+}
+
+.stats-bar-sec .hero-stat-v {
+    color: var(--white);
+}
+
+.stats-bar-sec .hero-stat-divider {
+    background: var(--bdr);
 }
 
 /* Intro section */
@@ -843,7 +807,7 @@ section {
 .stile .sn {
     font-size: 1.9rem;
     font-weight: 900;
-    color: var(--steel);
+    color: var(--blue-h);
     letter-spacing: -.04em;
     line-height: 1;
     margin-bottom: 12px
@@ -1135,7 +1099,6 @@ section {
         grid-template-columns: 1fr
     }
 }
-
 .ptbl-wrap {
     margin-top: 60px;
     background: rgba(255, 255, 255, .04);
@@ -1444,6 +1407,48 @@ section {
 
 .price-note strong {
     color: var(--red)
+}
+
+/* Info Package Banner */
+.info-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+    padding: 24px 28px;
+    background: var(--navy);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 125, 255, .2);
+}
+
+.info-banner-txt {
+    color: rgba(255, 255, 255, .75);
+    font-size: .92rem;
+    line-height: 1.65;
+    flex: 1;
+    min-width: 220px;
+}
+
+.info-banner-txt strong {
+    display: block;
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+@media (max-width: 620px) {
+    .info-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px
+    }
+
+    .info-banner .btn {
+        width: 100%;
+        justify-content: center
+    }
 }
 
 /* Upgrade */
