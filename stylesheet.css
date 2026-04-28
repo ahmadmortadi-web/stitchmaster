@@ -192,6 +192,10 @@ section {
     border-color: var(--bdr2)
 }
 
+.btn-ghost-bl-bg {
+    color: var(--white);
+}
+
 .btn-ghost:hover {
     border-color: var(--navy);
     background: var(--off);
@@ -2612,7 +2616,6 @@ dt {
 .hero-stat-l,
 .stile p,
 .sn,
-.img-ph-label,
 figcaption,
 small {
     font-size: var(--fs-min)
@@ -2625,7 +2628,6 @@ small {
 .img-ph {
     position: relative;
     background: linear-gradient(135deg, var(--off) 0%, var(--off2) 100%);
-    border: 1.5px dashed var(--bdr2);
     border-radius: 10px;
     overflow: hidden;
     display: flex;
@@ -2724,5 +2726,8 @@ small {
 /* Opportunity — wide photo, slight shadow */
 .opp-photo {
     border-radius: 12px;
-    box-shadow: var(--sh-md)
+    box-shadow: var(--sh-md);
+    background-image: url('images/stitchmaster_st_450_3.webp');
+    background-position: center;
+    background-size: cover;
 }
