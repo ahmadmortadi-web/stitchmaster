@@ -711,6 +711,15 @@ section {
     color: var(--red)
 }
 
+/* Main headline — the statement */
+.opp-h2 {
+    font-size: clamp(2.6rem, 5.5vw, 4.8rem);
+    line-height: 1.05;
+    letter-spacing: -.03em;
+    color: var(--navy);
+    margin-bottom: 0;
+    font-weight: 900
+}
 
 /* "Appreciated by Müller Martini." — red accent line */
 .opp-h2 em {
