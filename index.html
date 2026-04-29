@@ -12,20 +12,21 @@
 
 <body>
 
+  <!-- SCROLL PROGRESS -->
+  <div id="scroll-progress" role="progressbar" aria-hidden="true"></div>
+
   <!-- NAV -->
   <nav class="nav" id="mainNav">
     <div class="nav-inner">
-      <a href="#top" class="nav-logo"><img src="images/allaoui_logo.svg"></a>
+      <a href="#top" class="nav-logo"><img src="images/allaoui_logo.svg" loading="lazy"></a>
       <ul class="nav-links">
         <li><a href="#machine">Why We Recommend It</a></li>
         <li><a href="#refurb">Refurbishment</a></li>
         <li><a href="#service">Service &amp; Parts</a></li>
         <li><a href="#compare">vs. Competition</a></li>
-        <li><a href="#references">References</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="#config">Get a Quote</a></li>
+        <li class="nav-cta"><a href="#config" class="btn btn-red">Get a Quote &rarr;</a></li>
       </ul>
-      <div><a href="#config" class="btn btn-red" style="width: auto;">Configure Now</a></div>
       <button class="ham" aria-label="Menu" onclick="document.getElementById('mainNav').classList.toggle('open')">
         <span></span><span></span><span></span>
       </button>
@@ -49,7 +50,8 @@
     </div>
     <div class="hero-image-wrap">
       <div class="hero-image-container">
-        <img src="images/stitchmaster_st_450_hero_2.webp" alt="Heidelberg Stitchmaster ST 450 in production">
+        <img src="images/stitchmaster_st_450_hero_2.webp" alt="Heidelberg Stitchmaster ST 450 in production"
+          fetchpriority="high">
         <div class="hero-image-overlay"></div>
       </div>
     </div>
@@ -58,21 +60,41 @@
   <!-- INTRO / OPPORTUNITY -->
   <section class="opp-sec" id="intro">
     <div class="container">
+
       <div class="opp-head">
         <span class="opp-num">01</span>
         <span class="opp-tag">The Opportunity</span>
       </div>
-      <h2 class="opp-h2">A Third Path to <em>Full-Automation Saddle Stitching</em> — Without the Seven-Figure Price Tag.
-      </h2>
-      <p class="opp-lead">Upgrading saddle-stitching capacity usually comes down to two uncomfortable options: invest
-        seven figures in a brand-new machine, or take a chance on used equipment with unclear condition and uncertain
-        service.</p>
-      <p class="opp-lead opp-lead-strong">The <strong>Stitchmaster ST 450</strong> opens a third path — a proven,
-        high-performance saddle stitcher, professionally refurbished to factory standards and backed by the engineers
-        who originally built it at Heidelberg.</p>
-      <div class="img-ph img-ph-wide opp-photo" style="margin-top:52px;">
 
+      <h2 class="opp-h2">
+        Engineered by Heidelberg.<br>
+        <em>Appreciated by&nbsp;Müller&nbsp;Martini.</em>
+      </h2>
+
+      <div class="opp-rule"></div>
+
+      <div class="opp-body">
+        <p class="opp-p1">The ST&nbsp;450 is Heidelberg's final and most advanced Stitchmaster generation. Many features
+          and components of today's Müller&nbsp;Martini Primera are based on Stitchmaster engineering.</p>
+        <div class="opp-pitch">
+          <p>With Allaoui, you can now configure a fully refurbished Heidelberg Stitchmaster line — a modern, globally
+            serviced saddle stitching solution at a fraction of the cost of buying new. Expect <strong>six-figure
+              savings</strong> compared to a new machine, with no compromise on performance or support.</p>
+          <a href="#config" class="btn btn-red opp-cta">Configure Your ST&nbsp;450 &rarr;</a>
+        </div>
       </div>
+
+      <div class="img-ph img-ph-wide opp-photo">
+        <div class="img-ph-inner">
+          <svg viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <rect x="3" y="3" width="18" height="18" rx="2" />
+            <circle cx="8.5" cy="8.5" r="1.5" />
+            <polyline points="21,15 16,10 5,21" />
+          </svg>
+          <span class="img-ph-label">Machine in production — full-width photo</span>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -113,7 +135,8 @@
 
         <article class="why-card">
           <div class="why-media">
-            <img src="images/stitchmaster_st_450_hero_2.webp" alt="Stitchmaster ST 450 running at high speed">
+            <img src="images/stitchmaster_st_450_hero_2.webp" alt="Stitchmaster ST 450 running at high speed"
+              loading="lazy">
             <span class="why-num">01</span>
           </div>
           <div class="why-text">
@@ -127,7 +150,8 @@
 
         <article class="why-card why-card-rev">
           <div class="why-media">
-            <img src="images/stitchmaster_450 st.webp" alt="Servo-driven feeders on the Stitchmaster ST 450">
+            <img src="images/stitchmaster_450 st.webp" alt="Servo-driven feeders on the Stitchmaster ST 450"
+              loading="lazy">
             <span class="why-num">02</span>
           </div>
           <div class="why-text">
@@ -141,7 +165,8 @@
 
         <article class="why-card">
           <div class="why-media">
-            <img src="images/Heidelberg_Stitchmaster_450_hero.jpeg" alt="Quality control on the Stitchmaster ST 450">
+            <img src="images/Heidelberg_Stitchmaster_450_hero.jpeg" alt="Quality control on the Stitchmaster ST 450"
+              loading="lazy">
             <span class="why-num">03</span>
           </div>
           <div class="why-text">
@@ -157,7 +182,8 @@
 
         <article class="why-card why-card-rev">
           <div class="why-media">
-            <img src="images/stitchmaster_st_450_hero_2.webp" alt="Wide range of products produced on the ST 450">
+            <img src="images/stitchmaster_st_450_hero_2.webp" alt="Wide range of products produced on the ST 450"
+              loading="lazy">
             <span class="why-num">04</span>
           </div>
           <div class="why-text">
@@ -173,7 +199,8 @@
 
         <article class="why-card">
           <div class="why-media">
-            <img src="images/stitchmaster_450 st.webp" alt="Electronic shaft and servo drives on the ST 450">
+            <img src="images/stitchmaster_450 st.webp" alt="Electronic shaft and servo drives on the ST 450"
+              loading="lazy">
             <span class="why-num">05</span>
           </div>
           <div class="why-text">
@@ -193,15 +220,15 @@
   <section id="refurb" class="refurb-sec">
     <div class="container">
       <span class="eyebrow">Refurbishment</span>
-      <h2 style="margin-bottom:12px;">What "Fully Refurbished" Actually Means</h2>
-      <p style="max-width:650px;font-size:1.01rem;margin-bottom:46px;">This isn't "cleaned up and resold." Every ST 450
+      <h2 class="sec-h2-tight">What "Fully Refurbished" Actually Means</h2>
+      <p class="sec-lead">This isn't "cleaned up and resold." Every ST 450
         goes through a comprehensive, multi-stage process by the ex-Heidelberg engineers who originally built these
         machines.</p>
       <div class="steps-grid">
         <div class="stile">
           <div class="sn">01</div>
           <h5>Professional dismantling</h5>
-          <p>Our technicians handle careful dismantling at origin to prevent damage.</p>
+          <p>PPL technicians handle careful dismantling at origin to prevent damage.</p>
         </div>
         <div class="stile">
           <div class="sn">02</div>
@@ -274,7 +301,7 @@
       <div class="refurb-bottom">
         <a class="vid-bl vid-bl-portrait" href="https://youtu.be/zDp9sdH8qEw" target="_blank" rel="noopener"
           aria-label="Watch the factory tour video on YouTube">
-          <img src="https://img.youtube.com/vi/zDp9sdH8qEw/maxresdefault.jpg" alt="PPL Leipzig Workshop">
+          <img src="https://img.youtube.com/vi/zDp9sdH8qEw/maxresdefault.jpg" alt="PPL Leipzig Workshop" loading="lazy">
           <div class="vid-inner">
             <div class="play-btn"><svg viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z" />
@@ -294,7 +321,7 @@
   <!-- SECTION 4: SERVICE & PARTS -->
   <section id="service" class="service-sec">
     <div class="container">
-      <span class="eyebrow" style="color:rgba(255,255,255,.45)">Service &amp; Parts</span>
+      <span class="eyebrow eyebrow-svc">Service &amp; Parts</span>
       <h2 class="svc-h2">Service and Parts — Globally Available and Fairly Priced.</h2>
       <div class="svc-keys">
         <p class="svc-key">Over <strong>400 Stitchmasters</strong> are still running in <strong>50+ countries</strong>
@@ -357,7 +384,28 @@
           <p>Europe, Americas, Asia, Middle East, Africa.</p>
         </div>
       </div>
-
+      <div class="svc-photo-pair">
+        <div class="img-ph img-ph-dark img-ph-landscape">
+          <div class="img-ph-inner">
+            <svg viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <circle cx="8.5" cy="8.5" r="1.5" />
+              <polyline points="21,15 16,10 5,21" />
+            </svg>
+            <span class="img-ph-label">PPL team / workshop — Leipzig</span>
+          </div>
+        </div>
+        <div class="img-ph img-ph-dark img-ph-landscape">
+          <div class="img-ph-inner">
+            <svg viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <circle cx="8.5" cy="8.5" r="1.5" />
+              <polyline points="21,15 16,10 5,21" />
+            </svg>
+            <span class="img-ph-label">Spare-parts warehouse / inventory</span>
+          </div>
+        </div>
+      </div>
       <div class="parts-block">
         <div class="parts-head">
           <h3>Original-Spec Spare Parts</h3>
@@ -424,14 +472,20 @@
   <section id="compare" class="compare-sec">
     <div class="container">
       <span class="eyebrow">Side-by-Side</span>
-      <h2 style="margin-bottom:12px;">Stitchmaster vs. Alternatives</h2>
-      <p style="max-width:650px;margin-bottom:34px;font-size:1.01rem;">Both are proven, high-quality saddle stitching
+      <h2 class="sec-h2-tight">Stitchmaster vs. Alternatives</h2>
+      <p class="sec-lead">Both are proven, high-quality saddle stitching
         platforms. Here's how they compare on the specs that matter most in daily production.</p>
       <div class="vtabs" role="tablist">
-        <button class="vtab active" data-v="all">All machines</button>
-        <button class="vtab" data-v="primera">vs. Primera</button>
+        <button class="vtab" data-v="all">All machines</button>
+        <button class="vtab active" data-v="primera">vs. Primera</button>
         <button class="vtab" data-v="mm">vs. Müller Martini (other)</button>
         <button class="vtab" data-v="horizon">vs. Horizon</button>
+      </div>
+      <div class="ctbl-scroll-hint" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+        Scroll to compare all machines
       </div>
       <div class="ctbl-wrap">
         <table class="ctbl">
@@ -561,7 +615,7 @@
             </tr>
             <tr>
               <td>Max feeder positions</td>
-              <td class="hl">Up to <strong style="color:var(--red)">24</strong></td>
+              <td class="hl">Up to <strong class="tbl-accent">24</strong></td>
               <td class="vc140">Up to 12</td>
               <td class="ve140">Up to 12</td>
               <td class="vmc">Up to 12</td>
@@ -572,7 +626,7 @@
             </tr>
             <tr>
               <td>Stitching heads</td>
-              <td class="hl">Up to <strong style="color:var(--red)">6</strong> (normal + loop)</td>
+              <td class="hl">Up to <strong class="tbl-accent">6</strong> (normal + loop)</td>
               <td class="vc140">Up to 4</td>
               <td class="ve140">Up to 4</td>
               <td class="vmc">Up to 4</td>
@@ -758,8 +812,8 @@
   <section id="upgrade" class="upgrade-sec">
     <div class="container">
       <span class="eyebrow">For existing Stitchmaster owners</span>
-      <h2 style="margin-bottom:12px;">Already Running an Older Model Stitchmaster?</h2>
-      <p style="max-width:680px;font-size:1.01rem;">If you're operating an ST 100, ST 250, ST 300, ST 350, or ST 400,
+      <h2 class="sec-h2-tight">Already Running an Older Model Stitchmaster?</h2>
+      <p class="sec-lead sec-lead-wide">If you're operating an ST 100, ST 250, ST 300, ST 350, or ST 400,
         you already know the platform. The jump from an ST 400 to a 450 is bigger than most people realize.</p>
       <div class="utbl-wrap">
         <table class="utbl">
@@ -799,7 +853,7 @@
             <tr>
               <td>Max feeders</td>
               <td>16</td>
-              <td><strong style="color:var(--red)">24</strong></td>
+              <td><strong class="tbl-accent">24</strong></td>
             </tr>
             <tr>
               <td>Trimmer</td>
@@ -831,8 +885,8 @@
   <section id="references" class="ref-sec">
     <div class="container">
       <span class="eyebrow">References</span>
-      <h2 style="margin-bottom:12px;">Proven in Production — Customer Stories from Around the World</h2>
-      <p style="max-width:600px;margin-bottom:42px;font-size:1.01rem;">Print shops in different markets have chosen the
+      <h2 class="sec-h2-tight">Proven in Production — Customer Stories from Around the World</h2>
+      <p class="sec-lead">Print shops in different markets have chosen the
         ST 450 for their stitching line.</p>
       <div class="case-grid">
         <article class="case-card">
@@ -909,63 +963,413 @@
   <section id="config" class="cfg-sec">
     <div class="container">
       <span class="eyebrow">Configure Your Machine</span>
-      <h2 style="margin-bottom:8px;">Configure Your ST 450</h2>
-      <p style="max-width:520px;margin-bottom:42px;">Build your ideal configuration and receive a personalized
-        quotation. No prices shown — we respond within 2 business days.</p>
+      <h2 class="sec-h2-cfg">Configure Your ST 450</h2>
+      <p class="sec-lead">Build your ideal configuration and receive a personalised quotation. No prices shown — we
+        respond within 2 business days.</p>
       <div class="cfg-shell">
+
+        <!-- Sidebar -->
         <aside class="cfg-side">
           <div class="cfg-sl">Steps</div>
-          <div class="cstep done">
-            <div class="cn">&#10003;</div><span>Base Machine</span>
+          <div class="cstep" data-step="1">
+            <div class="cn">1</div><span>Base Machine</span>
           </div>
-          <div class="cstep active">
+          <div class="cstep" data-step="2">
             <div class="cn">2</div><span>Additional Feeders</span>
           </div>
-          <div class="cstep">
+          <div class="cstep" data-step="3">
             <div class="cn">3</div><span>Quality Control</span>
           </div>
-          <div class="cstep">
+          <div class="cstep" data-step="4">
             <div class="cn">4</div><span>Stitching &amp; Trimmer</span>
           </div>
-          <div class="cstep">
+          <div class="cstep" data-step="5">
             <div class="cn">5</div><span>Trade-In</span>
           </div>
-          <div class="cstep">
+          <div class="cstep" data-step="6">
             <div class="cn">6</div><span>Service &amp; Warranty</span>
           </div>
-          <div class="cstep">
+          <div class="cstep" data-step="7">
             <div class="cn">7</div><span>Contact &amp; Quote</span>
           </div>
         </aside>
+
+        <!-- Body -->
         <div class="cfg-body">
-          <div class="cfg-sl2">Step 2 of 7</div>
-          <h3>Additional Feeders</h3>
-          <p class="cfg-desc">The base machine includes 5 feeders + 1 cover folder. Add more to match your product mix —
-            up to 24 positions total.</p>
-          <div class="cc"><label>Additional vertical feeders (DVU2)</label><button>&#8722;</button><span
-              class="cv">2</span><button>+</button></div>
-          <div class="cc"><label>Additional horizontal feeders (DHU2)</label><button>&#8722;</button><span
-              class="cv">0</span><button>+</button></div>
-          <div class="copt sel">
-            <div class="chk"></div>
-            <div>
-              <h5>Second cover folder feeder (CHU)</h5>
-              <p>For products with multiple covers or insert variants.</p>
+
+          <!-- ── STEP 1: Base Machine ── -->
+          <div class="cfg-panel" id="cfg-step-1">
+            <div class="cfg-sl2">Step 1 of 7</div>
+            <h3>Base Machine</h3>
+            <p class="cfg-desc">Every Stitchmaster ST 450 from Allaoui includes the following as standard. Review and
+              continue to customise your configuration.</p>
+            <div class="cfg-base-grid">
+              <div class="cfg-base-item">
+                <div class="cfg-base-ico">&#9889;</div><strong>14,000 cph</strong><span>Max production speed</span>
+              </div>
+              <div class="cfg-base-item">
+                <div class="cfg-base-ico">&#128196;</div><strong>5 feeders + 1 cover folder</strong><span>Base feeder
+                  set (DVU2 / CHU)</span>
+              </div>
+              <div class="cfg-base-item">
+                <div class="cfg-base-ico">&#128247;</div><strong>IRIS camera system</strong><span>Per-feeder quality
+                  control</span>
+              </div>
+              <div class="cfg-base-item">
+                <div class="cfg-base-ico">&#9986;</div><strong>Three-knife trimmer</strong><span>Head, foot &amp; face
+                  trim</span>
+              </div>
+              <div class="cfg-base-item">
+                <div class="cfg-base-ico">&#128230;</div><strong>CHA stacker</strong><span>Heidelberg stacker — full
+                  format range</span>
+              </div>
+              <div class="cfg-base-item">
+                <div class="cfg-base-ico">&#9745;</div><strong>6-month warranty</strong><span>Parts warranty
+                  included</span>
+              </div>
+              <div class="cfg-base-item">
+                <div class="cfg-base-ico">&#128295;</div><strong>On-site installation</strong><span>By ex-Heidelberg
+                  engineers</span>
+              </div>
+              <div class="cfg-base-item">
+                <div class="cfg-base-ico">&#127891;</div><strong>Operator training</strong><span>Included with
+                  installation</span>
+              </div>
+            </div>
+            <div class="cfg-actions cfg-actions-start">
+              <button class="btn btn-red cfg-next">Customise My Configuration &rarr;</button>
             </div>
           </div>
-          <div class="copt">
-            <div class="chk"></div>
-            <div>
-              <h5>Base feeder extension (KUS 450)</h5>
-              <p>Extra chain base segments to extend the gathering line.</p>
+
+          <!-- ── STEP 2: Additional Feeders ── -->
+          <div class="cfg-panel" id="cfg-step-2" hidden>
+            <div class="cfg-sl2">Step 2 of 7</div>
+            <h3>Additional Feeders</h3>
+            <p class="cfg-desc">Base includes 5 vertical feeders + 1 cover folder. Add more to match your product mix —
+              up to 24 positions total.</p>
+            <div class="cc"><label>Additional vertical feeders (DVU2)</label><button type="button">&#8722;</button><span
+                class="cv">0</span><button type="button">+</button></div>
+            <div class="cc"><label>Additional horizontal feeders (DHU2)</label><button
+                type="button">&#8722;</button><span class="cv">0</span><button type="button">+</button></div>
+            <div class="copt" data-key="chu">
+              <div class="chk"></div>
+              <div>
+                <h5>Second cover folder feeder (CHU)</h5>
+                <p>For products with multiple covers or insert variants.</p>
+              </div>
+            </div>
+            <div class="copt" data-key="kus">
+              <div class="chk"></div>
+              <div>
+                <h5>Base feeder extension (KUS 450)</h5>
+                <p>Extra chain base segments to extend the gathering line.</p>
+              </div>
+            </div>
+            <div class="cfg-actions">
+              <button class="btn btn-ghost cfg-prev">&#8592; Back</button>
+              <button class="btn btn-navy cfg-next">Continue &#8594;</button>
             </div>
           </div>
-          <div class="cfg-note"><strong>Mockup note:</strong> Preview of Step 2. The full configurator implements all 7
-            steps with live summary, captcha, and POST submission to the Allaoui backend.</div>
-          <div class="cfg-actions"><a href="#" class="btn btn-ghost">&#8592; Back</a><a href="#"
-              class="btn btn-navy">Continue &#8594;</a></div>
-        </div>
-      </div>
+
+          <!-- ── STEP 3: Quality Control ── -->
+          <div class="cfg-panel" id="cfg-step-3" hidden>
+            <div class="cfg-sl2">Step 3 of 7</div>
+            <h3>Quality Control</h3>
+            <p class="cfg-desc">The ST 450's electronic shaft enables quality monitoring at every stage. Included items
+              are standard on every machine.</p>
+            <div class="copt copt-included">
+              <div class="chk chk-fixed">&#10003;</div>
+              <div>
+                <h5>IRIS camera per feeder <span class="cfg-incl">Included</span></h5>
+                <p>Detects missing, double, or wrong signatures at every feeder position.</p>
+              </div>
+            </div>
+            <div class="copt copt-included">
+              <div class="chk chk-fixed">&#10003;</div>
+              <div>
+                <h5>Marking-free thickness control <span class="cfg-incl">Included</span></h5>
+                <p>Via gathering chain dipping — no ink mark on the product.</p>
+              </div>
+            </div>
+            <div class="copt" data-key="barcode">
+              <div class="chk"></div>
+              <div>
+                <h5>Barcode reader per feeder</h5>
+                <p>Verify correct signatures by barcode — essential for variable-data work.</p>
+              </div>
+            </div>
+            <div class="copt" data-key="sko">
+              <div class="chk"></div>
+              <div>
+                <h5>Cut control (SKO)</h5>
+                <p>Verifies trim position after the three-knife trimmer.</p>
+              </div>
+            </div>
+            <div class="copt" data-key="oblique">
+              <div class="chk"></div>
+              <div>
+                <h5>Oblique sheet monitoring</h5>
+                <p>Detects skewed sheets in the gathering chain before stitching.</p>
+              </div>
+            </div>
+            <div class="copt" data-key="longbook">
+              <div class="chk"></div>
+              <div>
+                <h5>Long-book detection</h5>
+                <p>Catches oversize or misfolded signatures automatically.</p>
+              </div>
+            </div>
+            <div class="cfg-actions">
+              <button class="btn btn-ghost cfg-prev">&#8592; Back</button>
+              <button class="btn btn-navy cfg-next">Continue &#8594;</button>
+            </div>
+          </div>
+
+          <!-- ── STEP 4: Stitching & Trimmer ── -->
+          <div class="cfg-panel" id="cfg-step-4" hidden>
+            <div class="cfg-sl2">Step 4 of 7</div>
+            <h3>Stitching &amp; Trimmer</h3>
+            <p class="cfg-desc">Configure the stitching unit and trimmer options for your product range.</p>
+            <div class="cc cc-select"><label>Stitching heads (standard HK)</label>
+              <select class="cfg-sel" data-key="heads">
+                <option value="2">2 heads</option>
+                <option value="3">3 heads</option>
+                <option value="4" selected>4 heads</option>
+                <option value="5">5 heads</option>
+                <option value="6">6 heads (max)</option>
+              </select>
+            </div>
+            <div class="copt" data-key="loop">
+              <div class="chk"></div>
+              <div>
+                <h5>Loop / omega stitching heads</h5>
+                <p>For wire-loop binding — calendars, ring-bound documents.</p>
+              </div>
+            </div>
+            <div class="copt copt-included">
+              <div class="chk chk-fixed">&#10003;</div>
+              <div>
+                <h5>Staggered stitch <span class="cfg-incl">Included</span></h5>
+                <p>Electronic shaft enables staggered stitch at the press of a button — no mechanical changes needed.
+                </p>
+              </div>
+            </div>
+            <div class="copt" data-key="trio">
+              <div class="chk"></div>
+              <div>
+                <h5>TRIO — 3-up production</h5>
+                <p>Three simultaneous copies per gathering cycle for small-format products.</p>
+              </div>
+            </div>
+            <div class="copt" data-key="calendar">
+              <div class="chk"></div>
+              <div>
+                <h5>Calendar punching unit</h5>
+                <p>Punch holes for wire-o / spiral binding in-line.</p>
+              </div>
+            </div>
+            <div class="copt" data-key="gluing">
+              <div class="chk"></div>
+              <div>
+                <h5>Sample / postcard gluing</h5>
+                <p>In-line cold-glue application for inserts or samples.</p>
+              </div>
+            </div>
+            <div class="cfg-actions">
+              <button class="btn btn-ghost cfg-prev">&#8592; Back</button>
+              <button class="btn btn-navy cfg-next">Continue &#8594;</button>
+            </div>
+          </div>
+
+          <!-- ── STEP 5: Trade-In ── -->
+          <div class="cfg-panel" id="cfg-step-5" hidden>
+            <div class="cfg-sl2">Step 5 of 7</div>
+            <h3>Trade-In</h3>
+            <p class="cfg-desc">Do you have an existing saddle stitcher to trade in? We accept any brand or model,
+              handle logistics, and apply the credit to your ST 450.</p>
+            <div class="cfg-radio-group">
+              <label class="cfg-radio">
+                <input type="radio" name="tradein" value="no" checked> No trade-in
+              </label>
+              <label class="cfg-radio">
+                <input type="radio" name="tradein" value="yes"> Yes, I have a machine to trade in
+              </label>
+            </div>
+            <div class="cfg-tradein-fields" id="tradein-fields" hidden>
+              <div class="cfg-field-row">
+                <div class="cfg-field"><label>Brand / Manufacturer</label><input type="text"
+                    placeholder="e.g. Müller Martini"></div>
+                <div class="cfg-field"><label>Model</label><input type="text" placeholder="e.g. Primera E140"></div>
+              </div>
+              <div class="cfg-field-row">
+                <div class="cfg-field"><label>Approximate year</label>
+                  <select>
+                    <option value="">Select…</option>
+                    <option>Before 2000</option>
+                    <option>2000–2005</option>
+                    <option>2006–2010</option>
+                    <option>2011–2015</option>
+                    <option>2016–2020</option>
+                    <option>2021 or newer</option>
+                  </select>
+                </div>
+                <div class="cfg-field"><label>Condition</label>
+                  <select>
+                    <option value="">Select…</option>
+                    <option>Running — good condition</option>
+                    <option>Running — requires maintenance</option>
+                    <option>Not running</option>
+                    <option>Partially functional</option>
+                  </select>
+                </div>
+              </div>
+              <div class="cfg-field"><label>Additional notes (optional)</label><textarea rows="3"
+                  placeholder="Any details about the machine's history, options, or location…"></textarea></div>
+            </div>
+            <div class="cfg-actions">
+              <button class="btn btn-ghost cfg-prev">&#8592; Back</button>
+              <button class="btn btn-navy cfg-next">Continue &#8594;</button>
+            </div>
+          </div>
+
+          <!-- ── STEP 6: Service & Warranty ── -->
+          <div class="cfg-panel" id="cfg-step-6" hidden>
+            <div class="cfg-sl2">Step 6 of 7</div>
+            <h3>Service &amp; Warranty</h3>
+            <p class="cfg-desc">Every machine comes with the standard package below. Add optional upgrades to match your
+              production requirements.</p>
+            <div class="copt copt-included">
+              <div class="chk chk-fixed">&#10003;</div>
+              <div>
+                <h5>6-month parts warranty <span class="cfg-incl">Included</span></h5>
+                <p>Covers all components replaced during the refurbishment process.</p>
+              </div>
+            </div>
+            <div class="copt copt-included">
+              <div class="chk chk-fixed">&#10003;</div>
+              <div>
+                <h5>On-site installation &amp; commissioning <span class="cfg-incl">Included</span></h5>
+                <p>By ex-Heidelberg / PPL engineers at your facility.</p>
+              </div>
+            </div>
+            <div class="copt copt-included">
+              <div class="chk chk-fixed">&#10003;</div>
+              <div>
+                <h5>Operator training <span class="cfg-incl">Included</span></h5>
+                <p>Full operator and maintenance training during installation.</p>
+              </div>
+            </div>
+            <div class="copt" data-key="warranty18">
+              <div class="chk"></div>
+              <div>
+                <h5>Extended warranty — 18 months</h5>
+                <p>Extend parts warranty coverage to 18 months from installation date.</p>
+              </div>
+            </div>
+            <div class="copt" data-key="remote">
+              <div class="chk"></div>
+              <div>
+                <h5>Remote support package</h5>
+                <p>Direct line to PPL Leipzig engineers for remote diagnostics and troubleshooting.</p>
+              </div>
+            </div>
+            <div class="copt" data-key="service-contract">
+              <div class="chk"></div>
+              <div>
+                <h5>Annual service contract</h5>
+                <p>Scheduled preventive maintenance visits — keeps your machine at factory spec.</p>
+              </div>
+            </div>
+            <div class="copt" data-key="logistics">
+              <div class="chk"></div>
+              <div>
+                <h5>Shipping &amp; logistics coordination</h5>
+                <p>Allaoui handles full transport from PPL Leipzig to your facility.</p>
+              </div>
+            </div>
+            <div class="cfg-actions">
+              <button class="btn btn-ghost cfg-prev">&#8592; Back</button>
+              <button class="btn btn-navy cfg-next">Review &amp; Submit &#8594;</button>
+            </div>
+          </div>
+
+          <!-- ── STEP 7: Contact & Quote ── -->
+          <div class="cfg-panel" id="cfg-step-7" hidden>
+            <div class="cfg-sl2">Step 7 of 7</div>
+            <h3>Your Quote Request</h3>
+            <p class="cfg-desc">Almost there — tell us who you are and we'll send your personalised quotation within 2
+              business days.</p>
+            <div id="cfg-summary" class="cfg-summary"></div>
+            <div class="cfg-form">
+              <div class="cfg-field-row">
+                <div class="cfg-field"><label>First &amp; Last Name *</label><input type="text" id="f-name"
+                    placeholder="Jane Smith" required></div>
+                <div class="cfg-field"><label>Company *</label><input type="text" id="f-company"
+                    placeholder="Your Print Shop" required></div>
+              </div>
+              <div class="cfg-field-row">
+                <div class="cfg-field"><label>Country *</label>
+                  <select id="f-country" required>
+                    <option value="">Select country…</option>
+                    <option>Germany</option>
+                    <option>Austria</option>
+                    <option>Switzerland</option>
+                    <option>France</option>
+                    <option>Netherlands</option>
+                    <option>Belgium</option>
+                    <option>United Kingdom</option>
+                    <option>United States</option>
+                    <option>Canada</option>
+                    <option>Australia</option>
+                    <option>Spain</option>
+                    <option>Italy</option>
+                    <option>Poland</option>
+                    <option>Czech Republic</option>
+                    <option>Sweden</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="cfg-field"><label>Email *</label><input type="email" id="f-email"
+                    placeholder="jane@yourprint.com" required></div>
+              </div>
+              <div class="cfg-field-row">
+                <div class="cfg-field"><label>Phone</label><input type="tel" id="f-phone" placeholder="+49 …"></div>
+                <div class="cfg-field"><label>Expected order timeline</label>
+                  <select id="f-timeline">
+                    <option value="">Select…</option>
+                    <option>Within 1 month</option>
+                    <option>1–3 months</option>
+                    <option>3–6 months</option>
+                    <option>Just exploring</option>
+                  </select>
+                </div>
+              </div>
+              <div class="cfg-field"><label>Additional requirements or questions</label><textarea rows="4" id="f-notes"
+                  placeholder="Describe your production setup, current machine, typical job sizes, or any specific questions…"></textarea>
+              </div>
+              <label class="cfg-consent"><input type="checkbox" id="f-consent" required> I agree to be contacted by
+                Allaoui Graphic Machinery regarding this enquiry. <a href="https://allaoui.com/en/privacy-policy"
+                  target="_blank">Privacy policy</a>.</label>
+              <div class="cfg-actions cfg-actions-submit">
+                <button class="btn btn-ghost cfg-prev">&#8592; Back</button>
+                <button class="btn btn-red cfg-submit" type="button">Send Quote Request &rarr;</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── STEP 7 SUCCESS ── -->
+          <div class="cfg-panel" id="cfg-success" hidden>
+            <div class="cfg-success-inner">
+              <div class="cfg-success-icon">&#10003;</div>
+              <h3>Quote request sent!</h3>
+              <p>We've received your configuration and will send a personalised quotation to your email within <strong>2
+                  business days</strong>. A member of the Allaoui team will also follow up directly.</p>
+              <a href="#top" class="btn btn-navy cfg-back-top">Back to top</a>
+            </div>
+          </div>
+
+        </div><!-- end cfg-body -->
+      </div><!-- end cfg-shell -->
     </div>
   </section>
 
@@ -979,8 +1383,8 @@
         <span class="eyebrow">About Allaoui</span>
         <h2>Commercial reach.<br>Engineering depth.</h2>
         <p>Allaoui Graphic Machinery is a specialist in used and refurbished print finishing equipment, based in Aachen,
-          Germany, serving customers worldwide. For the ST 450 program we partner exclusively with former Heidelberg
-          postpress engineers who built these machines at the original Leipzig factory.</p>
+          Germany, serving customers worldwide. For the ST 450 program we partner exclusively with PPL PostPrint Leipzig
+          — former Heidelberg postpress engineers who built these machines at the original Leipzig factory.</p>
         <p>Two companies. One delivering machines to 50+ countries. The other knowing them down to the last component.
         </p>
         <div class="a-stats">
@@ -988,9 +1392,9 @@
           <div class="a-stat"><span class="av">50+</span><span class="al">Countries served</span></div>
           <div class="a-stat"><span class="av">ISO 9001</span><span class="al">Certified</span></div>
         </div>
-        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <div class="btn-row">
           <a href="#config" class="btn btn-red">Talk to our team</a>
-          <a href="https://allaoui.com/en/company" class="btn btn-ghost btn-ghost-bl-bg">About Allaoui &#8594;</a>
+          <a href="https://allaoui.com/en/company" class="btn btn-ghost">About Allaoui &#8594;</a>
         </div>
       </div>
     </div>
@@ -1055,9 +1459,9 @@
     <div class="container">
       <div class="fg">
         <div class="fb">
-          <div class="flogo"><img src="images/allaoui_logo.svg" alt="allaoui"></div>
+          <div class="flogo"><img src="images/allaoui_logo.svg" alt="allaoui" loading="lazy"></div>
           <div class="ftag">Innovate. Impress. Inspire.</div>
-          <p>Stitchmaster ST 450 refurbished — formed by the engineers who
+          <p>Stitchmaster ST 450 refurbished in partnership with PPL PostPrint Leipzig — formed by the engineers who
             built these machines at Heidelberg.</p>
         </div>
         <div class="fc">
@@ -1095,6 +1499,27 @@
     </div>
   </footer>
 
+  <!-- FLOATING PAGE NAV -->
+  <nav class="page-nav" id="pageNav" aria-label="Page sections">
+    <a href="#intro" class="pn-item" data-section="intro"> <span class="pn-dot"></span><span class="pn-label">The
+        Opportunity</span></a>
+    <a href="#machine" class="pn-item" data-section="machine"> <span class="pn-dot"></span><span class="pn-label">Why We
+        Recommend</span></a>
+    <a href="#refurb" class="pn-item" data-section="refurb"> <span class="pn-dot"></span><span
+        class="pn-label">Refurbishment</span></a>
+    <a href="#service" class="pn-item" data-section="service"> <span class="pn-dot"></span><span
+        class="pn-label">Service &amp; Parts</span></a>
+    <a href="#compare" class="pn-item" data-section="compare"> <span class="pn-dot"></span><span class="pn-label">vs.
+        Competition</span></a>
+    <a href="#upgrade" class="pn-item" data-section="upgrade"> <span class="pn-dot"></span><span
+        class="pn-label">Upgrade Path</span></a>
+    <a href="#references" class="pn-item" data-section="references"> <span class="pn-dot"></span><span
+        class="pn-label">References</span></a>
+    <a href="#config" class="pn-item" data-section="config"> <span class="pn-dot"></span><span
+        class="pn-label">Configure</span></a>
+    <a href="#faq" class="pn-item" data-section="faq"> <span class="pn-dot"></span><span class="pn-label">FAQ</span></a>
+  </nav>
+
   <!-- STICKY CTA -->
   <div class="scta">
     <div class="stxt"><strong>Ready to explore?</strong> Configure your Stitchmaster ST 450 and get a personalized
@@ -1104,9 +1529,47 @@
   </div>
 
   <script>
+    /* ── Floating page nav — IntersectionObserver ── */
+    (function () {
+      const pnItems = document.querySelectorAll('.pn-item');
+      const sections = Array.from(pnItems).map(a => document.getElementById(a.dataset.section)).filter(Boolean);
+      const pageNav = document.getElementById('pageNav');
+
+      /* Show nav only after hero is scrolled past */
+      const heroObs = new IntersectionObserver(([e]) => {
+        pageNav.classList.toggle('pn-visible', !e.isIntersecting);
+      }, { threshold: 0 });
+      const hero = document.querySelector('.hero');
+      if (hero) heroObs.observe(hero);
+
+      /* Highlight current section */
+      let active = null;
+      const secObs = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            if (active) active.classList.remove('pn-active');
+            active = document.querySelector('.pn-item[data-section="' + entry.target.id + '"]');
+            if (active) active.classList.add('pn-active');
+          }
+        });
+      }, { rootMargin: '-40% 0px -55% 0px' });
+      sections.forEach(s => secObs.observe(s));
+    })();
+
+    /* ── Nav scroll ── */
     const nav = document.getElementById('mainNav');
     window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 8));
     document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+
+    /* ── Scroll progress bar ── */
+    const prog = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement;
+      const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+      prog.style.width = pct + '%';
+    }, { passive: true });
+
+    /* ── Compare table tabs ── */
     const vtabs = document.querySelectorAll('.vtab');
     const vcols = ['c140', 'e140', 'mc', 'prinova', 'prima', 'bravo', 'hor'];
     const vgroups = {
@@ -1115,22 +1578,121 @@
       mm: ['prinova', 'prima', 'bravo'],
       horizon: ['hor']
     };
+    function applyTab(v) {
+      const show = vgroups[v] || vgroups.all;
+      vcols.forEach(c => document.querySelectorAll('.v' + c).forEach(el => el.style.display = show.includes(c) ? '' : 'none'));
+    }
     vtabs.forEach(tab => {
       tab.addEventListener('click', () => {
         vtabs.forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
-        const v = tab.dataset.v;
-        const show = vgroups[v] || vgroups.all;
-        vcols.forEach(c => document.querySelectorAll('.v' + c).forEach(el => el.style.display = show.includes(c) ? '' : 'none'));
+        applyTab(tab.dataset.v);
       });
     });
+    applyTab('primera'); /* default — hide non-Primera columns on load */
+
+    /* ── Swipe hint: hide after user scrolls the table ── */
+    const ctblWrap = document.querySelector('.ctbl-wrap');
+    const swipeHint = document.querySelector('.ctbl-scroll-hint');
+    if (ctblWrap && swipeHint) {
+      ctblWrap.addEventListener('scroll', () => swipeHint.style.opacity = '0', { once: true, passive: true });
+    }
+
+    /* ── Counter widgets ── */
     document.querySelectorAll('.cc').forEach(w => {
       const cv = w.querySelector('.cv');
+      if (!cv) return;
       const [m, p] = w.querySelectorAll('button');
-      m.onclick = () => { let v = +cv.textContent; if (v > 0) cv.textContent = v - 1; };
-      p.onclick = () => cv.textContent = +cv.textContent + 1;
+      if (m) m.onclick = () => { let v = +cv.textContent; if (v > 0) cv.textContent = v - 1; };
+      if (p) p.onclick = () => cv.textContent = +cv.textContent + 1;
     });
-    document.querySelectorAll('.copt').forEach(o => o.addEventListener('click', () => o.classList.toggle('sel')));
+
+    /* ── Toggle options (non-included) ── */
+    document.querySelectorAll('.copt:not(.copt-included)').forEach(o => o.addEventListener('click', () => o.classList.toggle('sel')));
+
+    /* ── Trade-in toggle ── */
+    document.querySelectorAll('input[name="tradein"]').forEach(r => r.addEventListener('change', () => {
+      const f = document.getElementById('tradein-fields');
+      if (f) f.hidden = r.value !== 'yes';
+    }));
+
+    /* ── Configurator ── */
+    const TOTAL = 7;
+    let currentStep = 1;
+
+    function cfgGoto(n) {
+      if (n < 1 || n > TOTAL) return;
+      document.querySelectorAll('.cfg-panel').forEach(p => p.hidden = true);
+      const panel = document.getElementById('cfg-step-' + n);
+      if (panel) panel.hidden = false;
+      document.querySelectorAll('.cstep').forEach(s => {
+        const sn = +s.dataset.step;
+        s.classList.remove('active', 'done');
+        if (sn === n) s.classList.add('active');
+        else if (sn < n) s.classList.add('done');
+      });
+      currentStep = n;
+      /* Scroll configurator into view on step change */
+      document.getElementById('config').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      /* Build summary on step 7 */
+      if (n === 7) buildSummary();
+    }
+
+    document.addEventListener('click', e => {
+      if (e.target.matches('.cfg-next')) cfgGoto(currentStep + 1);
+      if (e.target.matches('.cfg-prev')) cfgGoto(currentStep - 1);
+    });
+
+    /* ── Live summary builder ── */
+    function buildSummary() {
+      const box = document.getElementById('cfg-summary');
+      if (!box) return;
+      const selected = [];
+
+      /* Step 2: Feeders */
+      const vv = document.querySelectorAll('#cfg-step-2 .cv');
+      if (vv[0] && +vv[0].textContent > 0) selected.push(vv[0].textContent + ' extra vertical feeder(s)');
+      if (vv[1] && +vv[1].textContent > 0) selected.push(vv[1].textContent + ' extra horizontal feeder(s)');
+      document.querySelectorAll('#cfg-step-2 .copt.sel h5').forEach(h => selected.push(h.textContent.trim()));
+
+      /* Steps 3, 4, 6: Optional selected */
+      document.querySelectorAll('#cfg-step-3 .copt.sel h5, #cfg-step-4 .copt.sel h5, #cfg-step-6 .copt.sel h5').forEach(h => selected.push(h.textContent.trim()));
+
+      /* Step 4: Stitching heads */
+      const hs = document.querySelector('#cfg-step-4 .cfg-sel');
+      if (hs) selected.push(hs.options[hs.selectedIndex].text + ' stitching');
+
+      /* Step 5: Trade-in */
+      const ti = document.querySelector('input[name="tradein"]:checked');
+      if (ti && ti.value === 'yes') {
+        const brand = document.querySelector('#tradein-fields input[type="text"]');
+        selected.push('Trade-in: ' + (brand && brand.value ? brand.value : 'machine to trade in'));
+      }
+
+      if (!selected.length) { box.hidden = true; return; }
+      box.hidden = false;
+      box.innerHTML = '<div class="cfg-sum-title">Your selected options</div><ul>' +
+        selected.map(s => '<li>' + s + '</li>').join('') + '</ul>';
+    }
+
+    /* ── Submit ── */
+    document.querySelector('.cfg-submit') && document.querySelector('.cfg-submit').addEventListener('click', () => {
+      const name = document.getElementById('f-name');
+      const email = document.getElementById('f-email');
+      const country = document.getElementById('f-country');
+      const consent = document.getElementById('f-consent');
+      if (!name.value.trim() || !email.value.trim() || !country.value || !consent.checked) {
+        alert('Please fill in all required fields and accept the privacy policy.');
+        return;
+      }
+      /* Hide form, show success */
+      document.querySelectorAll('.cfg-panel').forEach(p => p.hidden = true);
+      document.getElementById('cfg-success').hidden = false;
+      document.querySelectorAll('.cstep').forEach(s => s.classList.add('done'));
+    });
+
+    /* Init: start at step 1 */
+    cfgGoto(1);
   </script>
 </body>
 

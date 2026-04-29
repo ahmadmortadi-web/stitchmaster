@@ -192,10 +192,6 @@ section {
     border-color: var(--bdr2)
 }
 
-.btn-ghost-bl-bg {
-    color: var(--white);
-}
-
 .btn-ghost:hover {
     border-color: var(--navy);
     background: var(--off);
@@ -650,43 +646,56 @@ section {
     background: var(--bdr);
 }
 
-/* Intro section */
-/* Opportunity section — heavy visual treatment */
+/* ── Opportunity — central pitch message ── */
 .opp-sec {
     background: var(--white);
-    padding: 140px 0 120px;
+    padding: 120px 0 100px;
     position: relative;
     overflow: hidden
 }
 
+/* Decorative background accent */
 .opp-sec::before {
     content: "";
     position: absolute;
-    top: -120px;
-    right: -120px;
-    width: 520px;
-    height: 520px;
-    background: var(--steel);
-    border-radius: 50%;
-    opacity: .55;
-    z-index: 0
+    top: -160px;
+    right: -160px;
+    width: 640px;
+    height: 640px;
+    background: radial-gradient(circle, var(--steel) 0%, transparent 70%);
+    opacity: .7;
+    z-index: 0;
+    pointer-events: none
+}
+
+.opp-sec::after {
+    content: "";
+    position: absolute;
+    bottom: -80px;
+    left: -80px;
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(235, 0, 80, .04) 0%, transparent 70%);
+    z-index: 0;
+    pointer-events: none
 }
 
 .opp-sec .container {
     position: relative;
     z-index: 1;
-    max-width: 1080px
+    max-width: 1100px
 }
 
+/* 01 label row */
 .opp-head {
     display: flex;
     align-items: baseline;
-    gap: 22px;
-    margin-bottom: 36px
+    gap: 18px;
+    margin-bottom: 28px
 }
 
 .opp-num {
-    font-size: 7rem;
+    font-size: 5rem;
     font-weight: 900;
     line-height: 1;
     color: var(--steel);
@@ -695,57 +704,98 @@ section {
 }
 
 .opp-tag {
-    font-size: .82rem;
+    font-size: var(--fs-min);
     font-weight: 800;
     letter-spacing: .22em;
     text-transform: uppercase;
     color: var(--red)
 }
 
-.opp-h2 {
-    font-size: clamp(2rem, 4.4vw, 3.6rem);
-    line-height: 1.08;
-    letter-spacing: -.02em;
-    color: var(--navy);
-    margin-bottom: 36px;
-    max-width: 16ch
-}
 
+/* "Appreciated by Müller Martini." — red accent line */
 .opp-h2 em {
     font-style: normal;
-    color: var(--blue);
-    background: linear-gradient(180deg, transparent 65%, rgba(0, 125, 255, .14) 65%);
-    padding: 0 .08em
+    color: var(--red);
+    display: block
 }
 
-.opp-lead {
-    font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+/* Thin rule between headline and body */
+.opp-rule {
+    height: 2px;
+    background: linear-gradient(to right, var(--red) 0%, var(--bdr) 40%, transparent 100%);
+    margin: 36px 0 40px;
+    max-width: 900px
+}
+
+/* Two-column body text */
+.opp-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: start;
+    max-width: 980px
+}
+
+/* Left: engineering credibility */
+.opp-p1 {
+    font-size: clamp(1.15rem, 1.8vw, 1.4rem);
     line-height: 1.6;
     color: var(--t2);
-    max-width: 720px;
-    margin-bottom: 22px
+    font-weight: 400
 }
 
-.opp-lead-strong {
-    color: var(--t1);
-    font-weight: 500;
-    border-left: 4px solid var(--red);
-    padding: 8px 0 8px 22px;
-    margin-top: 14px
+/* Right: commercial pitch callout */
+.opp-pitch {
+    background: var(--navy);
+    border-radius: 12px;
+    padding: 32px 34px;
+    position: relative;
+    overflow: hidden
 }
 
-.opp-lead-strong strong {
-    color: var(--navy);
+.opp-pitch::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--red)
+}
+
+.opp-pitch p {
+    font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+    line-height: 1.62;
+    color: rgba(255, 255, 255, .82);
+    font-weight: 400;
+    margin-bottom: 24px
+}
+
+.opp-pitch strong {
+    color: #fff;
     font-weight: 800
 }
 
-@media(max-width:660px) {
+.opp-cta {
+    display: inline-flex
+}
+
+.opp-photo {
+    margin-top: 56px
+}
+
+@media(max-width:760px) {
     .opp-sec {
-        padding: 80px 0 70px
+        padding: 80px 0 64px
     }
 
     .opp-num {
-        font-size: 4.2rem
+        font-size: 3.4rem
+    }
+
+    .opp-body {
+        grid-template-columns: 1fr;
+        gap: 28px
     }
 
     .opp-head {
@@ -2616,6 +2666,7 @@ dt {
 .hero-stat-l,
 .stile p,
 .sn,
+.img-ph-label,
 figcaption,
 small {
     font-size: var(--fs-min)
@@ -2628,6 +2679,7 @@ small {
 .img-ph {
     position: relative;
     background: linear-gradient(135deg, var(--off) 0%, var(--off2) 100%);
+    border: 1.5px dashed var(--bdr2);
     border-radius: 10px;
     overflow: hidden;
     display: flex;
@@ -2726,8 +2778,452 @@ small {
 /* Opportunity — wide photo, slight shadow */
 .opp-photo {
     border-radius: 12px;
-    box-shadow: var(--sh-md);
-    background-image: url('images/stitchmaster_st_450_3.webp');
-    background-position: center;
-    background-size: cover;
+    box-shadow: var(--sh-md)
+}
+
+
+/* ============================================================
+   SCROLL PROGRESS BAR
+   ============================================================ */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: var(--red);
+    z-index: 9999;
+    transition: width .1s linear;
+    pointer-events: none
+}
+
+/* ============================================================
+   INLINE-STYLE REPLACEMENTS (moved from HTML)
+   ============================================================ */
+
+/* Shared section utilities */
+.sec-h2-tight {
+    margin-bottom: 12px
+}
+
+.sec-h2-cfg {
+    margin-bottom: 8px
+}
+
+.sec-lead {
+    max-width: 650px;
+    font-size: var(--fs-body);
+    margin-bottom: 34px
+}
+
+.sec-lead-wide {
+    max-width: 680px
+}
+
+.cfg-sec .sec-lead {
+    max-width: 520px;
+    margin-bottom: 42px
+}
+
+.ref-sec .sec-lead {
+    max-width: 600px;
+    margin-bottom: 42px
+}
+
+.btn-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap
+}
+
+/* Coloured value in tables */
+.tbl-accent {
+    color: var(--red)
+}
+
+/* Service eyebrow on dark background */
+.service-sec .eyebrow-svc {
+    color: rgba(255, 255, 255, .45)
+}
+
+/* opp-photo top margin */
+.opp-photo {
+    margin-top: 52px
+}
+
+/* ============================================================
+   COMPARE TABLE — SWIPE HINT
+   ============================================================ */
+.ctbl-scroll-hint {
+    display: none;
+    align-items: center;
+    gap: 7px;
+    font-size: var(--fs-min);
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--t4);
+    margin-bottom: 10px;
+    transition: opacity .3s
+}
+
+.ctbl-scroll-hint svg {
+    width: 14px;
+    height: 14px;
+    stroke: var(--t4)
+}
+
+@media (max-width: 860px) {
+    .ctbl-scroll-hint {
+        display: flex
+    }
+}
+
+/* ============================================================
+   CONFIGURATOR — NEW ELEMENTS
+   ============================================================ */
+
+/* Base machine grid (step 1) */
+.cfg-base-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 28px
+}
+
+.cfg-base-item {
+    background: var(--off);
+    border: 1px solid var(--bdr);
+    border-radius: 8px;
+    padding: 18px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+}
+
+.cfg-base-ico {
+    font-size: 1.4rem;
+    margin-bottom: 6px
+}
+
+.cfg-base-item strong {
+    font-size: var(--fs-min);
+    color: var(--navy)
+}
+
+.cfg-base-item span {
+    font-size: var(--fs-min);
+    color: var(--t3)
+}
+
+@media(max-width:760px) {
+    .cfg-base-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+/* Included options (non-interactive) */
+.copt-included {
+    opacity: .75;
+    cursor: default;
+    pointer-events: none
+}
+
+.chk-fixed {
+    background: var(--green) !important;
+    color: #fff !important;
+    font-size: .75rem !important;
+    border-color: var(--green) !important
+}
+
+.cfg-incl {
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-left: 8px
+}
+
+/* Step 1 CTA */
+.cfg-actions-start {
+    margin-top: 6px
+}
+
+/* Select inside counter row */
+.cc-select {
+    padding: 10px 17px;
+    align-items: center
+}
+
+.cfg-sel {
+    margin-left: auto;
+    padding: 7px 12px;
+    border: 1.5px solid var(--bdr2);
+    border-radius: 5px;
+    font-family: var(--font);
+    font-size: var(--fs-min);
+    color: var(--navy);
+    background: #fff;
+    cursor: pointer
+}
+
+/* Trade-in radio group */
+.cfg-radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 22px
+}
+
+.cfg-radio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: var(--fs-body);
+    color: var(--navy);
+    cursor: pointer
+}
+
+.cfg-radio input {
+    accent-color: var(--blue);
+    width: 16px;
+    height: 16px
+}
+
+/* Trade-in fields */
+.cfg-tradein-fields {
+    border-top: 1px solid var(--bdr);
+    padding-top: 20px;
+    margin-top: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px
+}
+
+/* Form fields */
+.cfg-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 16px
+}
+
+.cfg-field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px
+}
+
+.cfg-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+}
+
+.cfg-field label {
+    font-size: var(--fs-min);
+    font-weight: 700;
+    color: var(--navy)
+}
+
+.cfg-field input,
+.cfg-field select,
+.cfg-field textarea {
+    padding: 10px 13px;
+    border: 1.5px solid var(--bdr2);
+    border-radius: 5px;
+    font-family: var(--font);
+    font-size: var(--fs-body);
+    color: var(--navy);
+    background: #fff;
+    transition: border-color .13s
+}
+
+.cfg-field input:focus,
+.cfg-field select:focus,
+.cfg-field textarea:focus {
+    outline: none;
+    border-color: var(--blue)
+}
+
+.cfg-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: var(--fs-min);
+    color: var(--t2);
+    line-height: 1.55;
+    cursor: pointer
+}
+
+.cfg-consent input {
+    accent-color: var(--blue);
+    margin-top: 2px;
+    flex: 0 0 16px
+}
+
+.cfg-actions-submit {
+    margin-top: 8px
+}
+
+/* Live summary box (step 7) */
+.cfg-summary {
+    background: var(--steel);
+    border: 1px solid rgba(0, 125, 255, .15);
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin-bottom: 18px
+}
+
+.cfg-sum-title {
+    font-size: var(--fs-min);
+    font-weight: 800;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 10px
+}
+
+.cfg-summary ul {
+    padding-left: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+}
+
+.cfg-summary li {
+    font-size: var(--fs-min);
+    color: var(--navy)
+}
+
+/* Success panel */
+.cfg-success-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 52px 24px
+}
+
+.cfg-success-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--green);
+    color: #fff;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+    box-shadow: 0 8px 24px -8px rgba(0, 184, 148, .5)
+}
+
+.cfg-success-inner h3 {
+    margin-bottom: 12px
+}
+
+.cfg-success-inner p {
+    max-width: 440px;
+    color: var(--t2)
+}
+
+@media(max-width:640px) {
+    .cfg-field-row {
+        grid-template-columns: 1fr
+    }
+}
+
+.cfg-back-top {
+    margin-top: 22px
+}
+
+
+/* ============================================================
+   FLOATING PAGE NAV
+   ============================================================ */
+.page-nav {
+    position: fixed;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 180;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s var(--ease)
+}
+
+.page-nav.pn-visible {
+    opacity: 1;
+    pointer-events: auto
+}
+
+.pn-item {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    justify-content: flex-end;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 5px 0
+}
+
+.pn-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(16, 12, 52, .18);
+    border: 1.5px solid rgba(16, 12, 52, .22);
+    transition: all .2s var(--ease);
+    flex-shrink: 0
+}
+
+.pn-label {
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    color: var(--navy);
+    white-space: nowrap;
+    background: #fff;
+    border: 1px solid var(--bdr);
+    border-radius: 4px;
+    padding: 3px 8px;
+    margin-right: 10px;
+    box-shadow: var(--sh-sm);
+    opacity: 0;
+    transform: translateX(8px);
+    transition: opacity .18s, transform .18s;
+    pointer-events: none
+}
+
+/* Show label on hover */
+.pn-item:hover .pn-label,
+.pn-item.pn-active .pn-label {
+    opacity: 1;
+    transform: translateX(0)
+}
+
+/* Active dot */
+.pn-item.pn-active .pn-dot {
+    background: var(--red);
+    border-color: var(--red);
+    transform: scale(1.45);
+    box-shadow: 0 0 0 3px rgba(235, 0, 80, .15)
+}
+
+/* Hover dot */
+.pn-item:hover .pn-dot {
+    background: var(--blue);
+    border-color: var(--blue)
+}
+
+/* Hidden on mobile / narrow screens — not enough space */
+@media (max-width: 1100px) {
+    .page-nav {
+        display: none
+    }
 }
