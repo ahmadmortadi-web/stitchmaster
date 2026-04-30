@@ -299,16 +299,16 @@
         </div>
       </div>
       <div class="refurb-bottom">
-        <button class="vid-bl vid-bl-portrait" type="button" data-yt="zDp9sdH8qEw"
-          aria-label="Play the factory tour video">
-          <img src="https://img.youtube.com/vi/zDp9sdH8qEw/maxresdefault.jpg" alt="PPL Leipzig Workshop" loading="lazy">
+        <a class="vid-bl vid-bl-portrait" href="#" target="_blank" rel="noopener"
+          aria-label="Watch the factory tour video on YouTube">
+          <img src="#" alt="PPL Leipzig Workshop" loading="lazy">
           <div class="vid-inner">
             <div class="play-btn"><svg viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z" />
               </svg></div>
             <div class="vid-label">Factory Tour · Refurbishment center</div>
           </div>
-        </button>
+        </a>
         <div class="pq-card">
           <div class="pq-bar"></div>
           <p class="pq-txt">"Our engineers didn't just learn these machines — they built them."</p>
@@ -1501,19 +1501,6 @@
         class="btn btn-ghost-inv">Contact Us</a></div>
   </div>
 
-  <!-- VIDEO LIGHTBOX -->
-  <div class="vid-modal" id="vidModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Video player">
-    <div class="vid-modal-backdrop" data-vid-close></div>
-    <div class="vid-modal-frame">
-      <button class="vid-modal-close" type="button" data-vid-close aria-label="Close video">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M18 6L6 18M6 6l12 12" />
-        </svg>
-      </button>
-      <div class="vid-modal-inner" id="vidModalInner"></div>
-    </div>
-  </div>
-
   <script>
     /* ── Floating page nav — IntersectionObserver ── */
     (function () {
@@ -1679,40 +1666,6 @@
 
     /* Init: start at step 1 */
     cfgGoto(1);
-
-    /* ── Video lightbox ── */
-    (function () {
-      const modal = document.getElementById('vidModal');
-      const inner = document.getElementById('vidModalInner');
-      if (!modal || !inner) return;
-
-      function open(id) {
-        inner.innerHTML = '<iframe src="https://www.youtube.com/embed/' + encodeURIComponent(id) +
-          '?autoplay=1&rel=0" title="YouTube video" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
-        modal.classList.add('open');
-        modal.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-      }
-      function close() {
-        modal.classList.remove('open');
-        modal.setAttribute('aria-hidden', 'true');
-        inner.innerHTML = '';
-        document.body.style.overflow = '';
-      }
-
-      document.querySelectorAll('[data-yt]').forEach(btn => {
-        btn.addEventListener('click', e => {
-          e.preventDefault();
-          open(btn.dataset.yt);
-        });
-      });
-      modal.querySelectorAll('[data-vid-close]').forEach(el =>
-        el.addEventListener('click', close)
-      );
-      document.addEventListener('keydown', e => {
-        if (e.key === 'Escape' && modal.classList.contains('open')) close();
-      });
-    })();
   </script>
 </body>
 
