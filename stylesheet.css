@@ -262,7 +262,6 @@ section {
 }
 
 .nav-links a:hover {
-    background: var(--off);
     text-decoration: none
 }
 
@@ -1136,7 +1135,11 @@ section {
     cursor: pointer;
     border: 1px solid var(--bdr);
     display: block;
-    text-decoration: none
+    text-decoration: none;
+    width: 100%;
+    padding: 0;
+    font: inherit;
+    color: inherit
 }
 
 .vid-bl-portrait {
@@ -2730,7 +2733,7 @@ small {
     padding: 0
 }
 
-.img-ph-cover > img {
+.img-ph-cover>img {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -3248,4 +3251,90 @@ small {
     .page-nav {
         display: none
     }
+}
+
+/* ============================================================
+   VIDEO LIGHTBOX
+   ============================================================ */
+.vid-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px
+}
+
+.vid-modal.open {
+    display: flex;
+    animation: vidFadeIn .22s var(--ease)
+}
+
+.vid-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(8, 6, 28, .82);
+    backdrop-filter: blur(6px);
+    cursor: pointer
+}
+
+.vid-modal-frame {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    aspect-ratio: 16/9;
+    z-index: 1;
+    animation: vidScaleIn .28s var(--ease)
+}
+
+.vid-modal-inner {
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, .55)
+}
+
+.vid-modal-inner iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block
+}
+
+.vid-modal-close {
+    position: absolute;
+    top: -44px;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, .12);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .15s
+}
+
+.vid-modal-close:hover {
+    background: rgba(255, 255, 255, .22)
+}
+
+@keyframes vidFadeIn {
+    from { opacity: 0 }
+    to   { opacity: 1 }
+}
+
+@keyframes vidScaleIn {
+    from { opacity: 0; transform: scale(.96) }
+    to   { opacity: 1; transform: scale(1) }
+}
+
+@media (max-width: 600px) {
+    .vid-modal { padding: 12px }
+    .vid-modal-close { top: -38px; width: 32px; height: 32px }
 }

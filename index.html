@@ -299,16 +299,16 @@
         </div>
       </div>
       <div class="refurb-bottom">
-        <a class="vid-bl vid-bl-portrait" href="https://youtu.be/zDp9sdH8qEw" target="_blank" rel="noopener"
-          aria-label="Watch the factory tour video on YouTube">
+        <button class="vid-bl vid-bl-portrait" type="button" data-yt="zDp9sdH8qEw"
+          aria-label="Play the factory tour video">
           <img src="https://img.youtube.com/vi/zDp9sdH8qEw/maxresdefault.jpg" alt="PPL Leipzig Workshop" loading="lazy">
           <div class="vid-inner">
             <div class="play-btn"><svg viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z" />
               </svg></div>
-            <div class="vid-label">Factory Tour · Inside PPL Leipzig</div>
+            <div class="vid-label">Factory Tour · Refurbishment center</div>
           </div>
-        </a>
+        </button>
         <div class="pq-card">
           <div class="pq-bar"></div>
           <p class="pq-txt">"Our engineers didn't just learn these machines — they built them."</p>
@@ -376,15 +376,8 @@
         </div>
       </div>
       <div class="svc-photo-pair">
-        <div class="img-ph img-ph-dark img-ph-landscape">
-          <div class="img-ph-inner">
-            <svg viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <rect x="3" y="3" width="18" height="18" rx="2" />
-              <circle cx="8.5" cy="8.5" r="1.5" />
-              <polyline points="21,15 16,10 5,21" />
-            </svg>
-            <span class="img-ph-label">PPL team / workshop — Leipzig</span>
-          </div>
+        <div class="img-ph img-ph-landscape img-ph-cover">
+          <img src="images/allaoui_ppl_team.webp" alt="Our Experts" loading="lazy">
         </div>
         <div class="img-ph img-ph-landscape img-ph-cover">
           <img src="images/parts/spareparts_stitchmaster_st_450.webp" alt="ST 450 spare parts inventory" loading="lazy">
@@ -1374,7 +1367,8 @@
         </div>
         <div class="btn-row">
           <a href="#config" class="btn btn-red">Talk to our team</a>
-          <a href="https://allaoui.com/en/company" class="btn btn-ghost">About Allaoui &#8594;</a>
+          <a href="https://allaoui.com/en/company" class="btn btn-ghost-inv">About Allaoui
+            &#8594;</a>
         </div>
       </div>
     </div>
@@ -1505,6 +1499,19 @@
       quote.</div>
     <div class="sbtns"><a href="#config" class="btn btn-red">Configure Now</a><a href="https://allaoui.com/en/contact"
         class="btn btn-ghost-inv">Contact Us</a></div>
+  </div>
+
+  <!-- VIDEO LIGHTBOX -->
+  <div class="vid-modal" id="vidModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Video player">
+    <div class="vid-modal-backdrop" data-vid-close></div>
+    <div class="vid-modal-frame">
+      <button class="vid-modal-close" type="button" data-vid-close aria-label="Close video">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
+      </button>
+      <div class="vid-modal-inner" id="vidModalInner"></div>
+    </div>
   </div>
 
   <script>
@@ -1672,6 +1679,40 @@
 
     /* Init: start at step 1 */
     cfgGoto(1);
+
+    /* ── Video lightbox ── */
+    (function () {
+      const modal = document.getElementById('vidModal');
+      const inner = document.getElementById('vidModalInner');
+      if (!modal || !inner) return;
+
+      function open(id) {
+        inner.innerHTML = '<iframe src="https://www.youtube.com/embed/' + encodeURIComponent(id) +
+          '?autoplay=1&rel=0" title="YouTube video" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+      function close() {
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+        inner.innerHTML = '';
+        document.body.style.overflow = '';
+      }
+
+      document.querySelectorAll('[data-yt]').forEach(btn => {
+        btn.addEventListener('click', e => {
+          e.preventDefault();
+          open(btn.dataset.yt);
+        });
+      });
+      modal.querySelectorAll('[data-vid-close]').forEach(el =>
+        el.addEventListener('click', close)
+      );
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && modal.classList.contains('open')) close();
+      });
+    })();
   </script>
 </body>
 
